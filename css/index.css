@@ -468,6 +468,176 @@ button {
 
 /**endOfPromotion**/
 
+/******basket******/
+
+.order h1, .delivery h1 {
+    text-align: center;
+    font-size: 1.79em;
+    margin-top: 2em;
+    font-weight: 500;
+}
+
+.pizza_with_price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.71em;
+}
+
+.order_pizza_info {
+    display: flex;
+    align-items: center;
+}
+
+.order_pizza_info h2 {
+    font-size: 1.75em;
+    font-family: 'Bitter', serif;
+    margin-top: 0;
+    margin-bottom: 0.27em;
+    font-weight: 700;
+}
+
+.order_pizza_info p {
+    margin-top: 0;
+    font-size: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.order_pizza_info img {
+    width: 5.14em;
+    margin-right: 0.9em;
+}
+
+.order_price {
+    display: flex;
+    align-items: center;
+}
+
+.order-block hr {
+    height: 2px;
+    background: #030303;
+}
+
+.order_price span {
+    margin: 0 1.75em;
+    font-size: 1.43em;
+}
+
+.order_price p {
+    font-size: 1.43em;
+    margin-left: 2.5em;
+    margin-right: 2em;
+}
+
+.order_sale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order_promotions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order_promotions h2 {
+    font-size: 1.29em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.order_promotions h3 {
+    font-size: 1.29em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.order_promotions img {
+    margin-right: 1.68em;
+    margin-left: 0.79em;
+}
+
+.order_sale p {
+    font-size: 1.43em;
+    margin-right: 3.7em;
+}
+
+.sum {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0.71em;
+    margin-right: 3.96em;
+}
+
+.sum h1 {
+    font-size: 1.57em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.sum p {
+    font-size: 1.57em;
+    margin-left: 2.11em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.delivery_form {
+    display: flex;
+}
+
+.delivery_form p {
+    font-size: 1.43em;
+    padding: 0.75em 0;
+    margin: 0;
+    text-align: left;
+}
+
+.delivery_form {
+    display: flex;
+    align-items: center;
+}
+
+.delivery_input {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.43em;
+}
+
+.delivery_input input[type=text] {
+    font-size: 1.43em;
+    padding: 0.4em 0 0.4em 0.75em;
+    border: 2px solid black;
+    margin-bottom: 0.75em;
+    width: 12.15em;
+}
+
+.address {
+    margin-bottom: 0 !important;
+    width: 33.4em !important;
+}
+
+.delivery form {
+    text-align: center;
+}
+
+.delivery_input label {
+    display: none;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+}
+
+.order_price h4 {
+    display: none;
+}
+
+/***endOfBasket****/
+
 /******footer******/
 
 footer {
@@ -661,6 +831,12 @@ footer h2 {
         width: 29.3em;
     }
 
+    .order_promotions img {
+        width: 3.57em;
+    }
+
+    /*****************/
+
     .logo-footer img {
         width: 83px;
     }
@@ -744,6 +920,14 @@ footer h2 {
 
     .promotion {
         width: 26.4em;
+    }
+
+    .delivery_input {
+        width: 100%;
+    }
+
+    .address {
+        width: 95% !important;
     }
 }
 
@@ -1020,6 +1204,52 @@ footer h2 {
     .promotions {
         padding: 3em 0;
     }
+
+    /******basket******/
+
+    .order_pizza_info img {
+        display: none;
+    }
+
+    .order_price span {
+        margin: 0 1em;
+        font-size: 1.2em;
+    }
+
+    .order_price p {
+        font-size: 1.4em;
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+    }
+
+    .order_price img {
+        width: 1.6em;
+    }
+
+    .sum p, .sum h1, .order_sale p {
+        font-size: 1.4em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .order_promotions h2, .order_promotions h3 {
+        font-size: 1.1em;
+    }
+
+    .order_promotions img {
+        display: none;
+    }
+
+    .order_sale {
+        margin-top: 0.9em;
+        margin-bottom: 0.9em;
+    }
+
+    .order_pizza_info h2 {
+        font-size: 1.3em;
+    }
+
+    /***endOfBasket****/
 }
 
 @media screen and (max-width: 810px) {
@@ -1080,6 +1310,30 @@ footer h2 {
     }
 
     /****endOfMenu*****/
+
+    /******basket******/
+
+    .delivery_input label {
+        display: block;
+        font-size: 1.2em;
+        text-align: left;
+        margin-bottom: 0.5em;
+    }
+
+    .delivery_labels {
+        display: none;
+    }
+
+    .delivery input[type=text] {
+        width: 95%;
+        font-size: 1.1em;
+    }
+
+    .delivery_input {
+        margin-left: 0;
+    }
+
+    /***endOfBasket****/
 }
 
 @media screen and (max-width: 744px) {
@@ -1199,6 +1453,69 @@ footer h2 {
         margin-left: 1em;
         margin-right: 1em;
     }
+
+    /******basket******/
+
+    .order_price span {
+        margin: 0 0.6em;
+    }
+
+    .order_price p {
+        font-size: 1.2em;
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+    }
+
+    .remove {
+        width: 1.2em !important;
+    }
+
+    .sum p, .sum h1 {
+        font-size: 1.2em;
+    }
+
+    .order_sale p {
+        font-size: 1.2em;
+        margin-right: 2.5em;
+    }
+
+    .sum p {
+        font-size: 1.2em;
+        margin-left: 2.11em;
+    }
+
+    .sum {
+        margin-right: 3em;
+    }
+
+    .order_price p {
+        display: none;
+    }
+
+    .order_price h4 {
+        display: block;
+        font-weight: 400;
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+
+    .order_price_with_count {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1.5em;
+    }
+
+    .order_pizza_info p {
+        margin-right: 1.5em;
+    }
+
+    .order_pizza_info h2 {
+        margin-right: 1em;
+    }
+
+    /***endOfBasket****/
 }
 
 @media screen and (max-width: 576px) {
@@ -1486,6 +1803,37 @@ footer h2 {
         margin-bottom: 0;
         font-weight: 600;
     }
+
+    /******basket******/
+
+    .order_price {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .order_price_with_count {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    .pizza_with_price {
+        margin-bottom: 1em;
+    }
+
+    .order_sale p {
+        margin-right: 0;
+    }
+
+    .sum {
+        margin-right: 0;
+    }
+
+    .sum p {
+        margin-left: 1em;
+    }
+
+    /***endOfBasket****/
 }
 
 @media screen and (max-width: 367px) {

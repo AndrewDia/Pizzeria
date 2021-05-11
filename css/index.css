@@ -529,13 +529,7 @@ button {
     margin-right: 2em;
 }
 
-.order_sale {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.order_promotions {
+.order_sale, .order_promotions {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -606,7 +600,7 @@ button {
     margin-left: 1.43em;
 }
 
-.delivery_input input[type=text] {
+input[type=text] {
     font-size: 1.43em;
     padding: 0.4em 0 0.4em 0.75em;
     border: 2px solid black;
@@ -637,6 +631,112 @@ button {
 }
 
 /***endOfBasket****/
+
+/******create******/
+
+.create h1 {
+    text-align: center;
+    font-size: 1.79em;
+    margin-top: 2em;
+    margin-bottom: 1.1em;
+    font-weight: 500;
+}
+
+.choose button {
+    background: gray;
+    color: white;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.ingredients {
+    display: flex;
+    margin-top: 1em;
+    width: 1705px;
+    flex-wrap: wrap;
+}
+
+.ingredient-block {
+    width: 11.14em;
+    height: 11.14em;
+    border: 2px solid #030303;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0.89em;
+    margin-top: 0.89em;
+}
+
+.ingredient-block img {
+    width: 7.14em
+}
+
+.ingredient-block h1 {
+    font-size: 1.07em;
+    font-weight: 400;
+    margin-top: -0.17em;
+    margin-bottom: 0;
+}
+
+.ingredient-block h2 {
+    font-size: 1.29em;
+    font-weight: 500;
+    margin-top: 0.19em;
+}
+
+.ingredient_counter {
+    float: left;
+    position: absolute;
+    z-index: 1;
+    left: 0.54em;
+    top: 0.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingredient_counter p {
+    font-size: 1.43em;
+    margin: 0.2em;
+    font-weight: 500;
+}
+
+.black_square {
+    background: #030303;
+    font-size: 1.07em;
+    font-weight: 500;
+    color: white;
+    width: 1.33em;
+    height: 1.33em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone_and_request {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.96em;
+}
+
+.phone_and_request label {
+    font-size: 1.29em;
+}
+
+.phone_and_request input[type=text] {
+    margin-bottom: 0;
+    font-size: 1em;
+    padding: 0.53em 0 0.53em 0.53em;
+    margin-left: 1.25em;
+}
+
+.phone_and_request button {
+    margin-top: 0;
+}
+
+/****endOfCreate***/
 
 /******footer******/
 
@@ -837,6 +937,10 @@ footer h2 {
 
     /*****************/
 
+    .ingredients {
+        width: 1223px;
+    }
+
     .logo-footer img {
         width: 83px;
     }
@@ -929,6 +1033,40 @@ footer h2 {
     .address {
         width: 95% !important;
     }
+
+    /******create******/
+
+    .ingredients {
+        width: 983px;
+        flex-wrap: wrap;
+    }
+
+    .ingredient-block {
+        width: 9.9em;
+        height: 9.9em;
+        margin-right: 0.8em;
+        margin-top: 0.8em;
+    }
+
+    .ingredient-block img {
+        width: 6.3em;
+    }
+
+    .phone_and_request {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 2.5em;
+    }
+
+    .phone_and_request button {
+        margin-top: 1.77em;
+    }
+
+    .choose {
+        text-align: center;
+    }
+
+    /****endOfCreate***/
 }
 
 @media screen and (max-width: 1020px) {
@@ -1250,6 +1388,43 @@ footer h2 {
     }
 
     /***endOfBasket****/
+
+    /******create******/
+
+    .ingredients {
+        width: 756px;
+    }
+
+    .ingredient-block {
+        width: 8.2em;
+        height: 8.2em;
+        margin-right: 0.6em;
+        margin-top: 0.6em;
+    }
+
+    .ingredient-block img {
+        width: 4.98em;
+    }
+
+    .ingredient-block h1 {
+        font-size: 0.9em;
+    }
+
+    .ingredient-block h2 {
+        font-size: 1em;
+    }
+
+    .ingredient_counter p {
+        font-size: 1.2em;
+        margin: 0.2em;
+    }
+
+    .black_square {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    /****endOfCreate***/
 }
 
 @media screen and (max-width: 810px) {
@@ -1334,6 +1509,37 @@ footer h2 {
     }
 
     /***endOfBasket****/
+
+    /******create******/
+
+    .ingredients {
+        width: 714px;
+    }
+
+    .ingredient-block {
+        width: 7.7em;
+        height: 7.7em;
+    }
+
+    .ingredient-block img {
+        width: 4.5em;
+    }
+
+    .ingredient_counter p {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .black_square {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    .create button, .phone_and_request label {
+        font-size: 1.2em;
+    }
+
+    /****endOfCreate***/
 }
 
 @media screen and (max-width: 744px) {
@@ -1516,6 +1722,30 @@ footer h2 {
     }
 
     /***endOfBasket****/
+
+    /******create******/
+
+    .ingredients {
+        width: 555px;
+    }
+
+    .ingredient-block {
+        width: 7.95em;
+        height: 7.95em;
+        margin-right: 0.62em;
+        margin-top: 0.62em;
+    }
+
+    .ingredient-block img {
+        width: 4.9em;
+    }
+
+    .ingredient_counter p {
+        font-size: 1.2em;
+        margin: 0.2em;
+    }
+
+    /****endOfCreate***/
 }
 
 @media screen and (max-width: 576px) {
@@ -1639,6 +1869,38 @@ footer h2 {
     }
 
     /****endOfMenu*****/
+
+    /******create******/
+
+    .ingredients {
+        width: 105%;
+    }
+
+    .ingredient-block {
+        width: 45%;
+        height: auto;
+        margin-right: 0.62em;
+        margin-top: 0.62em;
+    }
+
+    .ingredient_counter p {
+        font-size: 1.2em;
+        margin: 0.2em;
+    }
+
+    .phone_and_request label {
+        font-size: 1em;
+    }
+
+    .create h1 {
+        font-size: 1.5em;
+    }
+
+    .ingredient-block h1 {
+        font-size: 0.9em;
+    }
+
+    /****endOfCreate***/
 }
 
 @media screen and (max-width: 525px) {
@@ -1834,6 +2096,11 @@ footer h2 {
     }
 
     /***endOfBasket****/
+
+    .phone_and_request input[type=text] {
+        margin-left: 0.6em;
+        width: 10em;
+    }
 }
 
 @media screen and (max-width: 367px) {
@@ -1895,4 +2162,43 @@ footer h2 {
     }
 
     /****endOfMenu*****/
+
+    /******create******/
+
+    .ingredients {
+        width: 100%;
+    }
+
+    .ingredient-block {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .ingredient-block img {
+        width: 6em;
+    }
+
+    .ingredient_counter p {
+        font-size: 1.5em;
+        margin: 0.2em;
+    }
+
+    .create button {
+        font-size: 1.1em;
+        padding: 0.53em 0.83em;
+    }
+
+    .phone_and_request label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone_and_request input[type=text] {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 0.6em;
+    }
+
+    /****endOfCreate***/
 }

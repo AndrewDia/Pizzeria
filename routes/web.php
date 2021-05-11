@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('/menu', 'PagesController@menu')->name('menu');
+Route::get('/promotions', 'PagesController@promotions')->name('promotions');
+Route::get('/create', 'PagesController@create')->name('create');
+Route::get('/basket', 'PagesController@basket')->name('basket');

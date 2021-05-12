@@ -68,5 +68,5 @@
             </div>
         </div>
     </section>
-    @include('goods', ['title' => 'Не пропустіть вигідні пропозиції', 'view' => 'old_price'])
+    @include('goods', ['title' => 'Не пропустіть вигідні пропозиції', 'view' => 'sale'])
 @endsection

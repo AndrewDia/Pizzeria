@@ -4,38 +4,35 @@
 
 @section('main')
     <?php
+    use App\Models\Filter;
     use App\Models\Pizza;
     $pizzas = Pizza::all();
+    $filters = Filter::all();
+    $f_count = count($filters);
+    foreach ($filters as $filter) {
+        if (isset($_GET[$filter->filter_name]) && $_GET[$filter->filter_name] == 1) {
+            $pizzas = $pizzas->where($filter->filter_name, '>=', 1)->sortBy($filter->filter_name);
+        }
+    }
     ?>
     <section>
         <div class="container">
             <div class="filters">
                 <div class="first_half">
-                    <div class="filter">
-                        <img src="img/vegan-filter.svg" alt="vegetarian">
-                        <span>вегетаріанська</span>
-                    </div>
-                    <div class="filter">
-                        <img src="img/spicy-filter.svg" alt="spicy">
-                        <span>гостра</span>
-                    </div>
-                    <div class="filter">
-                        <img src="img/sale-filter.svg" alt="sale">
-                        <span>знижка</span>
-                    </div>
+                    @for ($i = 0; $i < ceil($f_count/2); $i++)
+                        @include('filter', ['f' => $filters[$i]])
+                    @endfor
                 </div>
                 <div class="second_half">
                     <div class="second_half_filters">
-                        <div class="filter">
-                            <img src="img/new-filter.svg" alt="vegetarian">
-                            <span>новинка</span>
-                        </div>
-                        <div class="filter">
-                            <img src="img/hit-filter.svg" alt="spicy">
-                            <span>популярні</span>
-                        </div>
+                        @for ($i = ceil($f_count/2); $i < $f_count; $i++)
+                            @include('filter', ['f' => $filters[$i]])
+                        @endfor
                     </div>
-                    <p>очистити</p>
+                    <p>
+                        очистити
+                        <a href="{{route('menu')}}"></a>
+                    </p>
                 </div>
             </div>
         </div>

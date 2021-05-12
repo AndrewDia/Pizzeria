@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Кошик')
+@section('title', 'Створити піцу')
 
 @section('main')
 <section class="create">

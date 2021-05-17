@@ -1,14 +1,15 @@
+<script src="/js/amount.js"></script>
 <div class="pizza-block">
     <div>
-        <img src="img/pizza/{{$pizza->img_name}}" class="pizza-img">
+        <img src="/img/pizza/{{$pizza->img_name}}" class="pizza-img">
         <div class="pizza-title">
             <h2>{{$pizza->name}}</h2>
             <div>
                 @if($pizza->spicy)
-                    <img src="img/chili.svg" alt="spicy" class="pizza-filter">
+                    <img src="/img/chili.svg" alt="spicy" class="pizza-filter">
                 @endif
                 @if($pizza->veg)
-                    <img src="img/vegan.svg" alt="vegetarian" class="pizza-filter">
+                    <img src="/img/vegan.svg" alt="vegetarian" class="pizza-filter">
                 @endif
             </div>
         </div>
@@ -25,18 +26,26 @@
         @endif
         <div class="buy-panel">
             <ul>
-                <li>&ndash;</li>
+                <li>
+                    &ndash;
+                    <button onclick="decrease('{{$pizza->id}}')"></button>
+                </li>
                 <li id="count_{{$pizza->id}}">1</li>
-                <li>+</li>
+                <li>
+                    +
+                    <button onclick="increase('{{$pizza->id}}')"></button>
+                </li>
             </ul>
-            <form action="#">
+            <form id="form_{{$pizza->id}}" method="post" action="/add/1">
+                @csrf
+                <button id="add_{{$pizza->id}}" name="add" value="{{$pizza->id}}" type="submit"></button>
                 <div class="cart-button">
-                    <img src="img/shopping-cart.svg" alt="cart">
+                    <img src="/img/shopping-cart.svg" alt="cart">
                 </div>
             </form>
         </div>
     </div>
     @if($pizza->new)
-        <img src="img/new_tag.svg" alt="new" class="tag">
+        <img src="/img/new_tag.svg" alt="new" class="tag">
     @endif
 </div>

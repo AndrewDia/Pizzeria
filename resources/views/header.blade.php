@@ -4,7 +4,7 @@
             <div class="logo_with_info">
                 <a href="{{ route('index') }}">
                     <div class="logo">
-                        <img src="img/logo.png" alt="logo">
+                        <img src="/img/logo.png" alt="logo">
                         <div class="logo-text">
                             <span>Піцерія</span>
                             <p>"У Васі"</p>
@@ -25,7 +25,7 @@
                     <li><a href="{{ route('promotions') }}">Акції</a></li>
                 </ul>
                 <a href="{{ route('basket') }}">
-                    <img src="img/shopping-cart.svg" alt="cart" class="cart">
+                    <img src="/img/shopping-cart.svg" alt="cart" class="cart">
                 </a>
             </nav>
             <div class="display_none_mobile">

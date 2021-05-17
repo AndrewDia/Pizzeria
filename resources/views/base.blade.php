@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Roboto:wght@400;500&display=swap"
           rel="stylesheet">
-    <link rel="shortcut icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/index.css">
     <title>@yield('title')</title>
 </head>
 <body>

@@ -13,7 +13,7 @@ if (isset($params[$f->filter_name]) && $params[$f->filter_name] == 1) {
 ?>
 
 <div class="filter">
-    <img src="img/filter/{{$f->img_name}}">
+    <img src="/img/filter/{{$f->img_name}}">
     <span>{{$f->name}}</span>
     <a href="{{route('menu', $params)}}"></a>
 </div>

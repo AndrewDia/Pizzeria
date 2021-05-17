@@ -23,4 +23,11 @@ class PagesController extends Controller
     public function basket() {
         return view('basket');
     }
+
+    public function add($amount) {
+        $id = request()->post('add');
+        $amount += session()->get('cart.'.$id);
+        session()->put('cart.'.$id, $amount);
+        return redirect()->back();
+    }
 }

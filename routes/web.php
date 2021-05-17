@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,4 @@ Route::get('/menu', 'PagesController@menu')->name('menu');
 Route::get('/promotions', 'PagesController@promotions')->name('promotions');
 Route::get('/create', 'PagesController@create')->name('create');
 Route::get('/basket', 'PagesController@basket')->name('basket');
+Route::post('/add/{amount}', [PagesController::class, 'add'])->name('add');

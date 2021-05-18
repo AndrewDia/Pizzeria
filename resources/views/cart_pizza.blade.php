@@ -10,12 +10,18 @@
         <div class="order_price_with_count">
             <h4>{{$pizza->price * session('cart.'.$pizza->id)}} грн</h4>
             <div class="count">
-                <img src="/img/minus.svg" alt="-">
+                <button>
+                    <img src="/img/minus.svg" alt="-">
+                </button>
                 <span>{{session('cart.'.$pizza->id)}}</span>
-                <img src="/img/plus.svg" alt="+">
+                <button>
+                    <img src="/img/plus.svg" alt="+">
+                </button>
             </div>
         </div>
         <p>{{$pizza->price * session('cart.'.$pizza->id)}} грн</p>
-        <img src="/img/remove.svg" alt="remove" class="remove">
+        <button>
+            <img src="/img/remove.svg" alt="remove" class="remove">
+        </button>
     </div>
 </div>

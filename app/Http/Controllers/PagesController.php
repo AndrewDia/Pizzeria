@@ -35,9 +35,14 @@ class PagesController extends Controller
     }
 
     public function order() {
+//        foreach (session('cart') as $k => $v) {
+//            $pizza = Pizza::find($k);
+//            $pizza->popularity++;
+//            $pizza->save();
+//        }
         session()->forget('cart');
         session()->put('tel', request()->post('tel'));
-        session()->put('address', request()->post('address'));
+        session()->put('address', request()->post('address') ?? session('address'));
         return view('default_basket')
             ->with('txt', 'Дякуємо за Ваше замовлення!');
     }

@@ -1004,6 +1004,10 @@ footer h2 {
     .filter img {
         width: 2.5em
     }
+    svg {
+        width: 2.5em;
+        height: 2.5em;
+    }
 
     .pizzas-menu {
         width: 1208px;
@@ -1396,6 +1400,10 @@ footer h2 {
 
     .filter img {
         width: 3em;
+    }
+    svg {
+        width: 3em;
+        height: 3em;
     }
 
     .filter span {
@@ -2000,6 +2008,10 @@ footer h2 {
 
     .filter img {
         width: 2.7em;
+    }
+    svg {
+        width: 2.7em;
+        height: 2.7em;
     }
 
     .filter span {

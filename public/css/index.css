@@ -1480,6 +1480,10 @@ footer h2 {
         display: none;
     }
 
+    .order_pizza_info p {
+        margin-bottom: 0;
+    }
+
     .order_price span {
         margin: 0 1em;
         font-size: 1.2em;
@@ -1679,8 +1683,9 @@ footer h2 {
     }
 
     .black_square {
-        width: 1.2em;
-        height: 1.2em;
+        width: 1.3em;
+        height: 1.3em;
+        font-size: 1em;
     }
 
     .create button, .phone_and_request label {

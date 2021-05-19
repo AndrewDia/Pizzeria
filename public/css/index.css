@@ -907,6 +907,11 @@ footer h2 {
     margin-right: 1.25em;
 }
 
+
+.mobile_rights {
+    display: none;
+}
+
 .default_basket {
     background: url('../img/default_basket.png') no-repeat center left;
     background-size: 20.93em;
@@ -1445,6 +1450,13 @@ footer h2 {
         display: none;
     }
 
+    .mobile_rights {
+        font-size: 0.71em;
+        margin-top: 1.63em;
+        margin-bottom: 0;
+        display: block;
+    }
+
     .promotion-block {
         flex-wrap: wrap;
     }
@@ -1755,7 +1767,7 @@ footer h2 {
     .footer-block {
         flex-direction: column;
         justify-content: space-between;
-        height: 330px;
+        height: 380px;
     }
 
     .socnet {
@@ -1763,7 +1775,7 @@ footer h2 {
     }
 
     footer {
-        height: 450px;
+        height: 500px;
     }
 
     /*******menu*******/

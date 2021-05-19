@@ -28,6 +28,17 @@ class PagesController extends Controller
         $id = request()->post('add');
         $amount += session()->get('cart.'.$id);
         session()->put('cart.'.$id, $amount);
+        if (session('cart.'.$id) < 1) {
+            session()->forget('cart.'.$id);
+        }
         return redirect()->back();
+    }
+
+    public function order() {
+        session()->forget('cart');
+        session()->put('tel', request()->post('tel'));
+        session()->put('address', request()->post('address'));
+        return view('default_basket')
+            ->with('txt', 'Дякуємо за Ваше замовлення!');
     }
 }

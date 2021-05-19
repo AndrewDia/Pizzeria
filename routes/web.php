@@ -20,3 +20,4 @@ Route::get('/promotions', 'PagesController@promotions')->name('promotions');
 Route::get('/create', 'PagesController@create')->name('create');
 Route::get('/basket', 'PagesController@basket')->name('basket');
 Route::post('/add/{amount}', [PagesController::class, 'add'])->name('add');
+Route::post('/ordered', [PagesController::class, 'order'])->name('order');

@@ -12,7 +12,8 @@
         <div class="ingredients">
             @each('ingr', \App\Models\Ingredient::all(), 'ingr')
         </div>
-        <form class="phone_and_request" method="post" action="/ordered">
+        <form id="create_form" class="phone_and_request" method="post" action="/ordered">
+            @csrf
             <label>Телефон<input value="{{session('tel')}}" type="text" name="tel"
                                  pattern="(\+\d{2})?\d[\s\-]?\d{2}[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}"
                                  required></label>

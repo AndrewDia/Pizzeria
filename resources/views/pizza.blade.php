@@ -1,4 +1,4 @@
-<script src="/js/amount.js"></script>
+<script src="/js/pizza_amount.js"></script>
 <div class="pizza-block">
     <div>
         <img src="/img/pizza/{{$pizza->img_name}}" class="pizza-img">

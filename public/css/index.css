@@ -781,18 +781,34 @@ input[type=text] {
     font-size: 1.43em;
     margin: 0.2em;
     font-weight: 500;
+    position: relative;
+}
+.ingredient_counter p button {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 100;
 }
 
-.black_square {
+.ingredient_counter .black_square {
     background: #030303;
     font-size: 1.07em;
     font-weight: 500;
     color: white;
     width: 1.33em;
     height: 1.33em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .phone_and_request {
@@ -1566,7 +1582,7 @@ footer h2 {
         margin: 0.2em;
     }
 
-    .black_square {
+    .ingredient_counter .black_square {
         width: 1.2em;
         height: 1.2em;
     }
@@ -1690,7 +1706,7 @@ footer h2 {
         margin: 0;
     }
 
-    .black_square {
+    .ingredient_counter .black_square {
         width: 1.3em;
         height: 1.3em;
         font-size: 1em;

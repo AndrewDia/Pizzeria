@@ -54,9 +54,7 @@
 <section class="create">
     <div class="container">
         <h1>Створіть свою найкращу піцу</h1>
-        <form class="choose">
-            <button>Обрати піцу за основу</button>
-        </form>
+        <div class="grey_button">Обрати піцу за основу</div>
         <div class="ingredients">
             <div class="ingredient-block">
                 <img src="img/mozzarella.png" alt="ingredient">
@@ -145,6 +143,63 @@
         </form>
     </div>
 </section>
+<section class="choose__pizza">
+    <div class="container">
+        <div class="pizzas-menu">
+            <button class="pizza-block">
+                <img src="img/pizza/peperoni.png" alt="peperoni" class="pizza-img">
+                <h2>Папероні</h2>
+                <p>Пікантна пепероні, моцарела, томатний соус</p>
+            </button>
+            <button class="pizza-block">
+                <img src="img/pizza/margarita.png" alt="margarita" class="pizza-img">
+                <h2>Маргарита</h2>
+                <p>Моцарела, томати, італійські трави, томатний соус</p>
+            </button>
+            <button class="pizza-block">
+                <img src="img/pizza/karbonara.png" alt="karbonara" class="pizza-img">
+                <h2>Карбонара</h2>
+                <p>Бекон, чеддер, пармезан, моцарела, томати черрі, червона цибуля, часник, італійські трави</p>
+            </button>
+            <button class="pizza-block">
+                <img src="img/pizza/havaiska.png" alt="havaiska" class="pizza-img">
+                <h2>Гавайська</h2>
+                <p>Курка, ананаси, моцарела, томатний соус</p>
+            </button>
+            <button class="pizza-block">
+                <img src="img/pizza/havaiska.png" alt="havaiska" class="pizza-img">
+                <h2>Гавайська</h2>
+                <p>Курка, ананаси, моцарела, томатний соус</p>
+            </button>
+            <button class="pizza-block">
+                <img src="img/pizza/peperoni.png" alt="peperoni" class="pizza-img">
+                <h2>Папероні</h2>
+                <p>Пікантна пепероні, моцарела, томатний соус</p>
+            </button>
+            <button class="pizza-block">
+                <img src="img/pizza/havaiska.png" alt="havaiska" class="pizza-img">
+                <h2>Гавайська</h2>
+                <p>Курка, ананаси, моцарела, томатний соус</p>
+            </button>
+        </div>
+    </div>
+    <div class="hide__panel">
+        <div class="grey_button">Закрити</div>
+    </div>
+</section>
+<script>
+    let greyButtons = document.querySelectorAll('.grey_button');
+    if (greyButtons.length > 0) {
+        const choosePizza = document.querySelector('.choose__pizza');
+        for (let i = 0; i < greyButtons.length; i++) {
+            const greyButton = greyButtons[i];
+            greyButton.addEventListener("click", function (e) {
+                document.body.classList.toggle('_lock');
+                choosePizza.classList.toggle('_active');
+            });
+        }
+    }
+</script>
 <footer>
     <div class="container">
         <div class="footer-block">

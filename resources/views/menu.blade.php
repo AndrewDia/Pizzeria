@@ -11,7 +11,7 @@
     $f_count = count($filters);
     foreach ($filters as $filter) {
         if (isset($_GET[$filter->filter_name]) && $_GET[$filter->filter_name] == 1) {
-            $pizzas = $pizzas->where($filter->filter_name, '>=', 1)->sortBy($filter->filter_name);
+            $pizzas = $pizzas->where($filter->filter_name, '>=', 1)->sortByDesc($filter->filter_name);
         }
     }
     ?>

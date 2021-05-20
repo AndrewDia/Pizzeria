@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pizza;
+
 class PagesController extends Controller
 {
     public function index() {
@@ -17,7 +19,8 @@ class PagesController extends Controller
     }
 
     public function create() {
-        return view('create');
+        $pizzas = Pizza::get();
+        return view('create', compact('pizzas'));
     }
 
     public function basket() {

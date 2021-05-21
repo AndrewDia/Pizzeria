@@ -35,44 +35,5 @@
             <div class="grey_button">Закрити</div>
         </div>
     </section>
-    <script>
-        let increases = document.querySelectorAll('.increase');
-        let decreases = document.querySelectorAll('.decrease');
-        if (increases.length > 0) {
-            let decreaseDiv = document.querySelectorAll('.decrease');
-            let blackSquare = document.querySelectorAll('.black_square');
-            for (let i = 0; i < increases.length; i++) {
-                let counter = 0;
-                const increaseButt = increases[i];
-                const decreaseButt = decreases[i];
-                increaseButt.addEventListener("click", function (e) {
-                    if (counter === 0) {
-                        decreaseDiv[i].classList.add('_display');
-                        blackSquare[i].classList.add('_display');
-                    }
-                    if (counter < 5)
-                        counter++;
-                });
-                decreaseButt.addEventListener("click", function (e) {
-                    counter--;
-                    if (counter === 0) {
-                        decreaseDiv[i].classList.remove('_display');
-                        blackSquare[i].classList.remove('_display');
-                    }
-                });
-            }
-        }
-
-        let greyButtons = document.querySelectorAll('.grey_button');
-        if (greyButtons.length > 0) {
-            const choosePizza = document.querySelector('.choose__pizza');
-            for (let i = 0; i < greyButtons.length; i++) {
-                const greyButton = greyButtons[i];
-                greyButton.addEventListener("click", function (e) {
-                    document.body.classList.toggle('_lock');
-                    choosePizza.classList.toggle('_active');
-                });
-            }
-        }
-    </script>
+    <script src="/js/ingr_amount.js"></script>
 @endsection

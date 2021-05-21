@@ -85,7 +85,6 @@ nav {
 
 .cart {
     width: 1.93em;
-    filter: invert(90%) sepia(99%) saturate(29%) hue-rotate(255deg) brightness(107%) contrast(100%);
     margin-left: 3em;
     margin-right: 1em;
 }
@@ -213,7 +212,6 @@ nav {
 }
 
 .cart-button img {
-    filter: invert(90%) sepia(99%) saturate(29%) hue-rotate(255deg) brightness(107%) contrast(100%);
     width: 50px;
 }
 

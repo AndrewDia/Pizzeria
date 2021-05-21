@@ -25,7 +25,7 @@
                     <li><a href="{{ route('promotions') }}">Акції</a></li>
                 </ul>
                 <a href="{{ route('basket') }}">
-                    <img src="/img/shopping-cart.svg" alt="cart" class="cart">
+                    <img src="/img/<?php if (session('cart')) echo 'active_'; ?>shopping-cart.svg" alt="cart" class="cart">
                 </a>
             </nav>
             <div class="display_none_mobile">

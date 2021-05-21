@@ -19,8 +19,7 @@ class PagesController extends Controller
     }
 
     public function create() {
-        $pizzas = Pizza::get();
-        return view('create', compact('pizzas'));
+        return view('create');
     }
 
     public function basket() {

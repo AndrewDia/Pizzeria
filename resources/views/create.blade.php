@@ -3,12 +3,24 @@
 @section('title', 'Створити піцу')
 
 @section('main')
+    <?php
+    use App\Models\Ingredient;
+    use App\Models\Pizza;
+    $pizzas = Pizza::all();
+    $ingredients = Pizza::find(request()->post('pizza'))->ingredients ?? [];
+    foreach ($ingredients as $ingr) {
+        $add[$ingr->id] = 1;
+    }
+    $ingredients = Ingredient::all();
+    ?>
     <section class="create">
         <div class="container">
             <h1>Створіть свою найкращу піцу</h1>
             <div class="grey_button">Обрати піцу за основу</div>
             <div class="ingredients">
-                @each('ingr', \App\Models\Ingredient::all(), 'ingr')
+                @foreach($ingredients as $ingr)
+                    @include('ingr')
+                @endforeach
             </div>
             <form id="create_form" class="phone_and_request" method="post" action="/ordered">
                 @csrf
@@ -22,13 +34,10 @@
     <section class="choose__pizza">
         <div class="container">
             <div class="pizzas-menu">
-                @foreach($pizzas as $pizza)
-                    <button class="pizza-block">
-                        <img src="img/pizza/{{ $pizza->img_name }} " alt="pizza-img" class="pizza-img">
-                        <h2>{{ $pizza->name }}</h2>
-                        <p>{{ $pizza->description }}</p>
-                    </button>
-                @endforeach
+                <form method="post">
+                    @csrf
+                    @each('choose_pizza', $pizzas, 'pizza')
+                </form>
             </div>
         </div>
         <div class="hide__panel">

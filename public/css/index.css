@@ -416,6 +416,10 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
+.pizzas-menu form {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .pizzas-menu .pizza-block {
     margin-right: 21px;

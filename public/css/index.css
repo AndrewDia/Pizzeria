@@ -737,6 +737,12 @@ input[type=text] {
     font-size: 1.29em;
     cursor: pointer;
     display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.grey_button:hover {
+    background-color: #FFC736;
+    color: black;
 }
 
 .ingredients {

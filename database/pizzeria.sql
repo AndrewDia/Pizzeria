@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 13, 2021 at 09:28 AM
+-- Generation Time: May 21, 2021 at 10:35 PM
 -- Server version: 8.0.23
 -- PHP Version: 8.0.3
 
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `filters` (
-                           `id` int NOT NULL,
-                           `name` varchar(20) NOT NULL,
-                           `filter_name` varchar(10) NOT NULL,
-                           `img_name` varchar(30) NOT NULL
+  `id` int NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `filter_name` varchar(10) NOT NULL,
+  `img_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -52,11 +52,11 @@ INSERT INTO `filters` (`id`, `name`, `filter_name`, `img_name`) VALUES
 --
 
 CREATE TABLE `ingredients` (
-                               `id` int NOT NULL,
-                               `name` varchar(30) NOT NULL,
-                               `img_name` varchar(34) NOT NULL,
-                               `price` float NOT NULL,
-                               `weight` float NOT NULL
+  `id` int NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `img_name` varchar(34) NOT NULL,
+  `price` float NOT NULL,
+  `weight` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -68,7 +68,16 @@ INSERT INTO `ingredients` (`id`, `name`, `img_name`, `price`, `weight`) VALUES
 (2, 'Філе курки', 'chicken.png', 40, 100),
 (3, 'Салямі', 'salami.png', 40, 100),
 (4, 'Помідори', 'tomatoes.png', 40, 100),
-(5, 'Оливки', 'olives.png', 40, 100);
+(5, 'Оливки', 'olives.png', 40, 100),
+(6, 'Печериці', 'mushroom.jpg', 20, 50),
+(7, 'Лосось', 'salmon.png', 60, 40),
+(8, 'Кукурудза', 'corn.png', 10, 20),
+(9, 'Фета', 'feta.png', 20, 50),
+(10, 'Дорблю', 'dorblu.jpg', 60, 30),
+(11, 'Шинка', 'ham.png', 50, 50),
+(12, 'Ковбаски', 'sausages.jpg', 30, 50),
+(13, 'Альфредо', 'alfredo.jpg', 14, 20),
+(14, 'Тартар', 'tartar.png', 16, 20);
 
 -- --------------------------------------------------------
 
@@ -77,8 +86,8 @@ INSERT INTO `ingredients` (`id`, `name`, `img_name`, `price`, `weight`) VALUES
 --
 
 CREATE TABLE `ingredient_pizza` (
-                                    `pizza_id` int NOT NULL,
-                                    `ingredient_id` int NOT NULL
+  `pizza_id` int NOT NULL,
+  `ingredient_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -101,16 +110,16 @@ INSERT INTO `ingredient_pizza` (`pizza_id`, `ingredient_id`) VALUES
 --
 
 CREATE TABLE `pizzas` (
-                          `id` int NOT NULL,
-                          `name` varchar(20) NOT NULL,
-                          `description` varchar(100) NOT NULL,
-                          `price` float UNSIGNED NOT NULL,
-                          `img_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                          `veg` tinyint(1) NOT NULL DEFAULT '0',
-                          `spicy` tinyint(1) NOT NULL DEFAULT '0',
-                          `new` tinyint(1) NOT NULL DEFAULT '0',
-                          `sale` float UNSIGNED NOT NULL DEFAULT '0',
-                          `popularity` int UNSIGNED NOT NULL DEFAULT '0'
+  `id` int NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `price` float UNSIGNED NOT NULL,
+  `img_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `veg` tinyint(1) NOT NULL DEFAULT '0',
+  `spicy` tinyint(1) NOT NULL DEFAULT '0',
+  `new` tinyint(1) NOT NULL DEFAULT '0',
+  `sale` float UNSIGNED NOT NULL DEFAULT '0',
+  `popularity` int UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -118,10 +127,17 @@ CREATE TABLE `pizzas` (
 --
 
 INSERT INTO `pizzas` (`id`, `name`, `description`, `price`, `img_name`, `veg`, `spicy`, `new`, `sale`, `popularity`) VALUES
-(1, 'Пепероні', 'Пікантна пепероні, моцарелла, томатний соус', 80, 'peperoni.png', 1, 1, 1, 100, 5),
+(1, 'Пепероні', 'Пікантна пепероні, моцарела, томатний соус', 80, 'peperoni.png', 1, 1, 1, 100, 5),
 (2, 'Маргарита', 'Моцарела, томати, італійські трави, томатний соус', 70, 'margarita.png', 0, 1, 0, 0, 7),
 (3, 'Карбонара', 'Бекон, чеддер, пармезан, моцарела, томати черрі, червона цибуля, часник, італійські трави', 120, 'karbonara.png', 0, 0, 0, 0, 3),
-(4, 'Гавайська', 'Курка, ананаси, моцарела, томатний соус', 80, 'havaiska.png', 0, 0, 0, 0, 4);
+(4, 'Гавайська', 'Курка, ананаси, моцарела, томатний соус', 80, 'havaiska.png', 0, 0, 0, 0, 4),
+(5, 'Сирна', 'Моцарела, сири чеддер і пармезан, соус альфредо', 90, 'cheese.jpeg', 1, 0, 0, 0, 9),
+(6, 'Шампі', 'Печериці, моцарела, італійські трави, соус вершковий', 75, 'shampi.jpeg', 0, 0, 0, 85, 1),
+(7, 'Мексиканська', 'Курка, перець халапеньо, соус сальса, томати, солодкий перець, червона цибуля, моцарела', 90, 'mexican.jpg', 0, 0, 1, 0, 4),
+(8, 'Чеддер', 'Шинка, сир чеддер, солодкий перець, моцарела, томатний соус, часник, італійські трави', 100, 'chedder.jpeg', 0, 0, 0, 115, 7),
+(9, 'Техас', 'Шинка, бекон, печериці, перець халапеньйо, моцарела, соус вершковий, барбекю', 85, 'texas.jpg', 0, 1, 0, 95, 2),
+(10, 'Песто', 'Курка, соуси песто і альфредо, кубики бринзи, томати черрі, моцарела', 115, 'pesto.jpeg', 0, 0, 1, 0, 5),
+(11, 'М\'ясна', 'Ковбаски мисливські, шинка, салямі, філе куряче, моцарела, зелень, соус барбекю', 95, 'meat.jpeg', 0, 1, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -130,11 +146,11 @@ INSERT INTO `pizzas` (`id`, `name`, `description`, `price`, `img_name`, `veg`, `
 --
 
 CREATE TABLE `promos` (
-                          `id` int NOT NULL,
-                          `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                          `description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                          `active` tinyint(1) NOT NULL DEFAULT '1',
-                          `img_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+  `id` int NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '1',
+  `img_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -153,32 +169,32 @@ INSERT INTO `promos` (`id`, `name`, `description`, `active`, `img_name`) VALUES
 -- Indexes for table `filters`
 --
 ALTER TABLE `filters`
-    ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `ingredients`
 --
 ALTER TABLE `ingredients`
-    ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `ingredient_pizza`
 --
 ALTER TABLE `ingredient_pizza`
-    ADD PRIMARY KEY (`pizza_id`,`ingredient_id`),
+  ADD PRIMARY KEY (`pizza_id`,`ingredient_id`),
   ADD KEY `ingredient_id` (`ingredient_id`);
 
 --
 -- Indexes for table `pizzas`
 --
 ALTER TABLE `pizzas`
-    ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `promos`
 --
 ALTER TABLE `promos`
-    ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -188,25 +204,25 @@ ALTER TABLE `promos`
 -- AUTO_INCREMENT for table `filters`
 --
 ALTER TABLE `filters`
-    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ingredients`
 --
 ALTER TABLE `ingredients`
-    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `pizzas`
 --
 ALTER TABLE `pizzas`
-    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `promos`
 --
 ALTER TABLE `promos`
-    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -216,7 +232,7 @@ ALTER TABLE `promos`
 -- Constraints for table `ingredient_pizza`
 --
 ALTER TABLE `ingredient_pizza`
-    ADD CONSTRAINT `ingredient_pizza_ibfk_1` FOREIGN KEY (`ingredient_id`) REFERENCES `ingredients` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ingredient_pizza_ibfk_1` FOREIGN KEY (`ingredient_id`) REFERENCES `ingredients` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ingredient_pizza_ibfk_2` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 

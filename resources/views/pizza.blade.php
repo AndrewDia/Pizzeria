@@ -16,14 +16,12 @@
         <p>{{$pizza->description}}</p>
     </div>
     <div>
-        @if($pizza->sale != 0)
         <div class="pizza-price">
-            <h4>{{$pizza->sale}} грн</h4>
-        @endif
+            @if($pizza->sale != 0)
+                <h4>{{$pizza->sale}} грн</h4>
+            @endif
             <h3>{{$pizza->price}} грн</h3>
-        @if($pizza->sale != 0)
         </div>
-        @endif
         <div class="buy-panel">
             <ul>
                 <li>

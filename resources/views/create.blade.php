@@ -9,7 +9,7 @@
     $pizzas = Pizza::all();
     $ingredients = Pizza::find(request()->post('pizza'))->ingredients ?? [];
     foreach ($ingredients as $ingr) {
-        $add[$ingr->id] = 1;
+        $add[$ingr->id] = $ingr->pivot->number;
     }
     $ingredients = Ingredient::all();
     ?>

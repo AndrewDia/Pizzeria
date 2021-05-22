@@ -10,6 +10,6 @@ class Ingredient extends Model
     use HasFactory;
 
     public function pizzas() {
-        return $this->belongsToMany(Pizza::class);
+        return $this->belongsToMany(Pizza::class)->withPivot('number');
     }
 }

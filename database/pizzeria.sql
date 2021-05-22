@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 21, 2021 at 10:35 PM
+-- Generation Time: May 22, 2021 at 09:05 AM
 -- Server version: 8.0.23
 -- PHP Version: 8.0.3
 
@@ -87,21 +87,54 @@ INSERT INTO `ingredients` (`id`, `name`, `img_name`, `price`, `weight`) VALUES
 
 CREATE TABLE `ingredient_pizza` (
   `pizza_id` int NOT NULL,
-  `ingredient_id` int NOT NULL
+  `ingredient_id` int NOT NULL,
+  `number` int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ingredient_pizza`
 --
 
-INSERT INTO `ingredient_pizza` (`pizza_id`, `ingredient_id`) VALUES
-(1, 1),
-(2, 1),
-(3, 1),
-(4, 1),
-(4, 2),
-(2, 4),
-(3, 4);
+INSERT INTO `ingredient_pizza` (`pizza_id`, `ingredient_id`, `number`) VALUES
+(1, 1, 1),
+(1, 12, 2),
+(2, 1, 2),
+(2, 4, 1),
+(3, 1, 1),
+(3, 4, 1),
+(3, 9, 1),
+(3, 11, 1),
+(4, 1, 1),
+(4, 2, 1),
+(4, 8, 1),
+(5, 1, 2),
+(5, 9, 2),
+(5, 10, 2),
+(5, 13, 1),
+(6, 1, 1),
+(6, 6, 2),
+(6, 14, 1),
+(7, 1, 1),
+(7, 2, 1),
+(7, 4, 1),
+(7, 13, 1),
+(8, 1, 1),
+(8, 11, 2),
+(9, 1, 1),
+(9, 3, 1),
+(9, 6, 1),
+(9, 11, 1),
+(9, 14, 1),
+(10, 1, 1),
+(10, 4, 1),
+(10, 9, 1),
+(10, 13, 1),
+(10, 14, 1),
+(11, 1, 1),
+(11, 2, 1),
+(11, 3, 1),
+(11, 11, 1),
+(11, 12, 1);
 
 -- --------------------------------------------------------
 

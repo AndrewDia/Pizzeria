@@ -26,15 +26,15 @@
             <ul>
                 <li>
                     &ndash;
-                    <button onclick="decrease('{{$pizza->id}}')"></button>
+                    <button onclick="decrease('{{$pizza->id}}_{{$goods??0}}')"></button>
                 </li>
-                <li id="count_{{$pizza->id}}">1</li>
+                <li id="count_{{$pizza->id}}_{{$goods??0}}">1</li>
                 <li>
                     +
-                    <button onclick="increase('{{$pizza->id}}')"></button>
+                    <button onclick="increase('{{$pizza->id}}_{{$goods??0}}')"></button>
                 </li>
             </ul>
-            <form id="form_{{$pizza->id}}" method="post" action="/add/1">
+            <form id="form_{{$pizza->id}}_{{$goods??0}}" method="post" action="/add/1">
                 @csrf
                 <button id="add_{{$pizza->id}}" name="add" value="{{$pizza->id}}" type="submit"></button>
                 <div class="cart-button">

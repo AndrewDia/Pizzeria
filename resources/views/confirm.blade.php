@@ -1,4 +1,3 @@
-@section('popup')
     <div class="confirm_bg">
         <div class="container">
             <div class="confirm-form">
@@ -21,4 +20,3 @@
             });
         }
     </script>
-@endsection

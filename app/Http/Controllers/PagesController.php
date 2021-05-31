@@ -33,15 +33,11 @@ class PagesController extends Controller
         if (session('cart.'.$id) < 1) {
             session()->forget('cart.'.$id);
         }
+        session()->flash('added', 1);
         return redirect()->back();
     }
 
     public function order() {
-//        foreach (session('cart') as $k => $v) {
-//            $pizza = Pizza::find($k);
-//            $pizza->popularity++;
-//            $pizza->save();
-//        }
         session()->forget('cart');
         session()->put('tel', request()->post('tel'));
         session()->put('address', request()->post('address') ?? session('address'));

@@ -1,4 +1,9 @@
-<script src="/js/pizza_amount.js"></script>
+@once
+    <script src="/js/pizza_amount.js"></script>
+    @if (session('added'))
+        @include('confirm')
+    @endif
+@endonce
 <div class="pizza-block">
     <div>
         <img src="/img/pizza/{{$pizza->img_name}}" class="pizza-img">

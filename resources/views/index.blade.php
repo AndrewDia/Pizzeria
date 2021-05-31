@@ -3,9 +3,7 @@
 @section('title', 'Піцерія "У Васі"')
 
 @section('main')
-    <?php
-        $goods = 0;
-    ?>
+    <?php $goods = 0; ?>
     <section class="about">
         <div class="container">
             <h1>Чому в нас найкраща піца?</h1>
@@ -73,5 +71,4 @@
         </div>
     </section>
     @include('goods', ['title' => 'Не пропустіть вигідні пропозиції', 'view' => 'sale'])
-    <?php $goods++; ?>
 @endsection

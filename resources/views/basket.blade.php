@@ -77,15 +77,17 @@
                     @csrf
                     <div class="delivery_form">
                         <div class="delivery_labels">
+                            <p>Ім'я</p>
                             <p>Телефон</p>
                             <p>Адреса</p>
                         </div>
                         <div class="delivery_input">
+                            <label>Ім'я</label><input value="{{session('name')}}" type="text" name="name" required>
                             <label>Телефон</label><input value="{{session('tel')}}" type="text" name="tel"
                                                          pattern="(\+\d{2})?\d[\s\-]?\d{2}[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}"
                                                          required>
                             <label>Адреса</label><input value="{{session('address')}}" type="text" class="address"
-                                                        name="address">
+                                                        name="address" required>
                         </div>
                     </div>
                     <button type="submit">Замовити</button>
